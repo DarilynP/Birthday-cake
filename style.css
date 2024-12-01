@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffefd5, #ffe4e1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  text-align: center;
+  background: #fffaf0;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  font-size: 2.5rem;
+  color: #d2691e;
+  margin-bottom: 20px;
+}
+
+.cake {
+  position: relative;
+  width: 500px; /* Wider cake */
+  margin: 0 auto;
+}
+
+.layer {
+  height: 100px;
+  width: 500px; /* Match cake width */
+  margin: 0 auto;
+  border-radius: 20px;
+  position: relative;
+}
+
+.top {
+  background: #ffb6c1; /* Light pink */
+}
+
+.bottom {
+  background: #d2691e; /* Rich brown */
+}
+
+.frosting {
+  height: 20px;
+  background: #fff0f5;
+  border-radius: 10px;
+}
+
+.drip {
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  background: #fff0f5;
+  border-radius: 15px;
+  animation: drip 2s infinite;
+}
+
+.drip1 {
+  top: 20px;
+  left: 100px;
+}
+
+.drip2 {
+  top: 20px;
+  left: 300px;
+}
+
+.drip3 {
+  top: 20px;
+  left: 150px;
+}
+
+.drip4 {
+  top: 20px;
+  left: 350px;
+}
+
+/* Candles */
+.candles {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.candle {
+  width: 20px;
+  height: 80px;
+  margin: 0 10px;
+  background: linear-gradient(to bottom, #ffd700, #ffa500);
+  border-radius: 10px;
+  position: relative;
+}
+
+.flame {
+  width: 10px;
+  height: 20px;
+  background: radial-gradient(circle, #ff4500, #ff6347);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  animation: flicker 0.5s infinite alternate;
+}
+
+/* Animations */
+@keyframes drip {
+  0%,
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    transform: scale(1) translateX(-50%);
+  }
+  100% {
+    transform: scale(1.2) translateX(-50%);
+  }
+}
